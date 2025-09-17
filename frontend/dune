@@ -1,0 +1,10 @@
+(ocamllex
+ (modules lexer))
+(menhir
+ (modules parser)
+ (flags  --dump -v )
+ (infer true))
+(executable
+ (name kokac)
+ (promote (until-clean))
+ (flags ()))
